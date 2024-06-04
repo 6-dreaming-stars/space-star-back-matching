@@ -1,6 +1,5 @@
 package com.spacestar.back.quickmatching.service;
 
-import com.spacestar.back.quickmatching.dto.QuickMatchingEnterReqDto;
 import com.spacestar.back.quickmatching.dto.WebSocketInfo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,4 +29,5 @@ public class QuickMatchingServiceImpl implements QuickMatchingService{
     public void connectSocket(WebSocketSession socketSession) {
         socketInfos.put(socketSession.getId(), new WebSocketInfo(socketSession, 0));
     }
+
 }
