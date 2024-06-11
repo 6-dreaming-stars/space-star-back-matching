@@ -14,7 +14,6 @@ public class QuickMatchingRepository {
     }
 
     public void save(QuickMatching quickMatching) {
-        System.out.println("quickMatching.getId() = " + quickMatching.getId());
         redisTemplate.opsForZSet().add(KEY,  quickMatching,System.currentTimeMillis());
     }
 
